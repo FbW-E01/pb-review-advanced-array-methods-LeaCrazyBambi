@@ -53,9 +53,10 @@ const array1 = [
 
 // Exercise 2.
 function printPersonName(person) {
-  return person.name;
+  console.log(person.name);
 }
-let onlyNames = array1.forEach(printPersonName);
+
+array1.forEach(printPersonName);
 
 //  Exercise 3 - URL
 // array1.forEach(function (item) {
@@ -66,11 +67,11 @@ let onlyNames = array1.forEach(printPersonName);
 //   }});
 // Above is the same as bellow
 
-array1.forEach((i) => {
-  i.URL.startsWith("http")
-    ? console.log(i.URL)
-    : console.log("Invalid URL for ", i.name);
-});
+// array1.forEach((i) => {
+//   i.URL.startsWith("http")
+//     ? console.log(i.URL)
+//     : console.log("Invalid URL for", i.name);
+// });
 
 // Exercise 4.
 array1.sort(function () {
@@ -102,5 +103,6 @@ array1.sort(function (a, b) {
 // console.log(array1);
 
 // Exercise 7.
-let allNames = array1.name;
-console.log(allNames);
+
+// console.log(onlyNames);
+// const onlyNames = printPersonName();
