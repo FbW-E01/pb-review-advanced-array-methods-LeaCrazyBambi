@@ -53,11 +53,11 @@ const array1 = [
 
 // Exercise 2.
 function printPersonName(person) {
-  console.log(person.name);
+  return person.name;
 }
 
-array1.forEach(printPersonName);
-
+const onlyNames = array1.map(printPersonName);
+console.log(onlyNames);
 //  Exercise 3 - URL
 // array1.forEach(function (item) {
 //   if (item.URL.startsWith("http")) {
@@ -104,5 +104,6 @@ array1.sort(function (a, b) {
 
 // Exercise 7.
 
-// console.log(onlyNames);
-// const onlyNames = printPersonName();
+const namesString = onlyNames.join(", ");
+const namesAllTogether = namesString.replace(/,(?=[^,]*$)/, " and");
+console.log(namesAllTogether);
